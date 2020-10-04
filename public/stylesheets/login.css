@@ -1,0 +1,79 @@
+body {
+	background-color: #b3ecff;
+}
+
+.main {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.tab {
+	overflow: hidden;
+	border: 1px solid #70d1e2;
+	background-color: #80e1f2;
+}
+
+.tab button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	font-size: 17px;
+}
+
+.tab button:hover {
+	background-color: #68c3d4;
+}
+
+.tab button.active {
+	background-color: #56afbf;
+}
+
+.tabcontent {
+	background-color: #b3f7ff;
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #a3e7ef;
+	border-top: none;
+}
+
+#UserType {
+	text-align: center;
+	font-family: Comic Sans MS;
+	color: #002e63
+}
+
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 10px 0 20px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+.tabcontent button {
+	width: 100%;
+	background-color: #374aab;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+}
+
+.tabcontent button:hover {
+	opacity: 0.8;
+}
+
+#formText {
+	font-family: Cambria;
+}
+
+#Register {
+	width: 50%;
+	margin: 10px 15px 10px 0;
+}

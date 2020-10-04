@@ -9,6 +9,14 @@ const urlencodedParser = bodyParser.urlencoded({extended:false});
 
 const dataPath = "../data/users.json";
 
+router.get('/', function(req,res) {
+  res.render('login');
+});
+
+router.get('/homepage', function(req,res){
+  res.render('homepage');
+});
+
 router.post("/register", async (req, res) => {
   const newUser = new User(req.body);
   try{
@@ -26,7 +34,9 @@ router.post("/login",urlencodedParser,async (req, res) => {
   try{
     const userFound = await User.findByCredentials(req.body.userid, req.body.password);
     const token = await userFound.generateToken();
-    res.send({userFound,token});
+    res.cookie('auth_token',token, {maxage: 900000, httpOnly: true});
+    //res.send({userFound,token});
+    res.redirect('../projects/summary');
   }catch (e){
     console.log(e);
     res.status(400).send(e);

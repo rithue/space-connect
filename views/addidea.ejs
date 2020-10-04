@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Project Idea</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form name="addIdea">
+        <label for="title" id="titleLabel">Title:</label>
+        <input type="text" id="title" name="title" placeholder="title"><br />
+        <label for="description" id="descripLabel">Description:</label>
+        <input type="text" id="description" name="description" placeholder="description"><br />
+        <label for="typeSelect" id="typeLabel">Project Type:</label>
+        <select name="types" id="type">
+            <option value="">--Please choose an option--</option>
+            <option value="engineering">Engineering</option>
+            <option value="math">Math</option>
+            <option value="technology">Technology</option>
+            <option value="science">Science</option>
+        </select>
+        <button id="btnSubmit" type="submit">Submit</button>
+    </form>
+  </body>
+</html>

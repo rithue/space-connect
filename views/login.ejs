@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+        <title>Log in</title>
+        <%- include('./partials/head'); %>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/login.css"/>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
+    </head>
+	<body>
+        <header>
+            <%- include('./partials/header'); %>
+        </header>
+		<h1 id="UserType">Student Login:</h1><br />
+		<div class="main">
+			<div class="tab">
+				<button class="tablinks active" onclick="loginTab(event, 'Student')">Student</button>
+				<button class="tablinks" onclick="loginTab(event, 'Educator')">Educator</button>
+			</div>
+			<div id="Student" class="tabcontent" style="display: block">
+				<form name="studentLogin" id="loginForm" method="post" action="/spaceconnect/users/login">
+					<label for="userid" id="formText">Username:</label>
+					<input type="text" id="userid" name="userid" placeholder="Username"><br />
+					<label for="password" id="formText">Password:</label>
+					<input type="password" id="password" name="password" placeholder="Password"><br />
+					<button type="submit">Login</button>
+					<p style="font-family: Cambria; margin: 50px 0 10px 0">Don't have an account yet?</p>
+					<button id="Register">Register</button>
+					<span style="font-family: Cambria;">Forgot <a href="#" style="text-decoration: none; color: blue;">password?</a></span>
+				</form>
+			</div>
+			<!-- <div id="Educator" class="tabcontent">
+				<form name="educatorRegister">
+					<label for="username" id="formText">Username:</label>
+					<input type="text" id="username" name="username" placeholder="Username"><br />
+					<label for="password" id="formText">Password:</label>
+					<input type="password" id="password" name="password" placeholder="Password"><br />
+					<button type="submit">Login</button>
+					<p style="font-family: Cambria; margin: 50px 0 10px 0">Don't have an account yet?</p>
+					<button id="Register">Register</button>
+					<span style="font-family: Cambria;">Forgot <a href="#" style="text-decoration: none; color: blue;">password?</a></span>
+				</form>
+			</div> -->
+        </div>
+        <footer id="footer">
+            <%- include('./partials/footer'); %>
+        </footer>
+	</body>
+	<script src="/javascripts/login-controller.js"></script>
+</html>

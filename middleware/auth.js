@@ -8,9 +8,9 @@ const Employee = require("../models/users");
 const auth = async function (req,res,next) {
 
     try{
-        const token = req.header("Authorization").replace("Bearer ","")
+        const token = req.cookies["auth_token"];
         // console.log(token)
-        const decoded = jwt.verify(token,process.env.JWT_SECRET)
+        const decoded = jwt.verify(token,"THISISUCI")
         const user = await Employee.findOne( { _id: decoded._id, "tokens.token":token })
         
         if(!user) {

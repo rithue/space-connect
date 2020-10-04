@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project Ideas</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Project Ideas</h1>
+    <ul>
+      <%
+        var list = '';
+        for (i = 0; i < ideasummary.length; i++) {
+          <!--list += '<li><a href="mailto:' + ideasummary[i].title + '">' + ideasummary[i].title + '</a></li>';-->
+          list += '<div class="summaryItem"><div class="projectTitle">'+ ideasummary[i].title + '</div>'+
+          '<div class="projectType">'+ ideasummary[i].type + '</div>'+
+          '<div class="projectTopic">'+ ideasummary[i].topic + '</div>'+
+          '<div class="projectDescription">'+ ideasummary[i].description + '</div></div>';
+        }
+      %>
+      <%- list %>
+    </ul>
+  </body>
+</html>
