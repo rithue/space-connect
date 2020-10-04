@@ -1,5 +1,5 @@
 body {
-	background-color: #b3ecff;
+	background-color: white;
 }
 
 .main {
@@ -9,8 +9,8 @@ body {
 
 .tab {
 	overflow: hidden;
-	border: 1px solid #70d1e2;
-	background-color: #80e1f2;
+	border: 1px solid lightgrey;
+	background-color: lightgrey;
 }
 
 .tab button {
@@ -33,10 +33,10 @@ body {
 }
 
 .tabcontent {
-	background-color: #b3f7ff;
+	background-color: white;
 	display: none;
 	padding: 6px 12px;
-	border: 1px solid #a3e7ef;
+	border: 1px solid rgb(32, 30, 30);
 	border-top: none;
 }
 
@@ -51,7 +51,7 @@ input[type=text], input[type=password] {
 	padding: 12px 20px;
 	margin: 10px 0 20px 0;
 	display: inline-block;
-	border: 1px solid #ccc;
+	border: 1px solid black;
 	box-sizing: border-box;
 }
 
