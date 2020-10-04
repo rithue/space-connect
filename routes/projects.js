@@ -17,11 +17,23 @@ router.get("/summary", auth, async (req, res) => {
     }
 });
 
+router.get("/addideatemplate", auth,async (req, res) => {
+    try {
+        res.render('addidea');
+    } catch (e){
+        console.log(e);
+        res.status(500).send(e);
+    }
+});
+
 router.post("/addidea", auth, async (req, res) => {
     try{
+        console.log("req body:", req.body);
         const projectsIdeas = new ProjectsIdeas(req.body);
+        console.log("proj ideas:", projectsIdeas);
         await projectsIdeas.save();
-        res.status(201).send(projectsIdeas);
+        res.redirect('../projects/summary')
+        // res.status(201).send(projectsIdeas);
    } catch (e){
         console.log(e);
         res.status(400).send();

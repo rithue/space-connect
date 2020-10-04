@@ -2,24 +2,70 @@
 <html>
   <head>
     <title>Add Project Idea</title>
+    <%- include('./partials/head'); %>
+    <link rel='stylesheet' href='/stylesheets/addidea.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <form name="addIdea">
-        <label for="title" id="titleLabel">Title:</label>
-        <input type="text" id="title" name="title" placeholder="title"><br />
-        <label for="description" id="descripLabel">Description:</label>
-        <input type="text" id="description" name="description" placeholder="description"><br />
-        <label for="typeSelect" id="typeLabel">Project Type:</label>
-        <select name="types" id="type">
-            <option value="">--Please choose an option--</option>
-            <option value="engineering">Engineering</option>
-            <option value="math">Math</option>
-            <option value="technology">Technology</option>
-            <option value="science">Science</option>
-        </select>
-        <button id="btnSubmit" type="submit">Submit</button>
-    </form>
+    <header>
+      <%- include('./partials/header'); %>
+    </header>
+    <div class="titleHeader">
+      <div class="titleHeaderItem">
+        <h1>Add New Idea</h1>
+      </div>
+      <div class="titleHeaderItem"></div>
+      <div>
+        <form method="GET" action="/spaceconnect/projects/addideatemplate">
+          <button type="submit" id="addNewIdeas" class="gradientBtn" onclick="">Add New Ideas</button>
+        </form>
+      </div>
+    </div>
+    <div class=newIdeaTemplate>
+    <form name="addIdea" method="POST" action="/spaceconnect/projects/addidea">
+        <div class="newIdeaItem" >
+          <label for="title" id="titleLabel">Title:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+          <textarea type="text" id="title" name="title" rows="2" cols="80" placeholder="title"></textarea><br />
+        </div>
+        <div class="newIdeaItem">
+          <label for="description" id="descripLabel">Description:</label>
+          <textarea type="text" id="description" rows="10" cols="80" name="description" placeholder="description"></textarea><br />
+        </div>
+        <div class="newIdeaItem">
+          <label for="typeSelect" id="typeLabel">Project Type:</label>
+          <select name="type" id="type">
+              <option value="">--Please choose a project type--</option>
+              <option value="engineering">Engineering</option>
+              <option value="math">Math</option>
+              <option value="technology">Technology</option>
+              <option value="science">Science</option>
+          </select>
+        </div>
+        <div class="newIdeaItem">
+          <label for="topicSelect" id="topicLabel">Project Topic:</label>
+          <select name="topic" id="topic">
+              <option value="">--Please choose a topic--</option>
+              <option value="aeronautics">Aeronautics</option>
+              <option value="astronomy">Astronomy</option>
+              <option value="astronomy">Biology</option>
+              <option value="chemistry">Chemistry</option>
+              <option value="computerscience">Computer Science</option>
+              <option value="electricity">Electricity</option>
+              <option value="energy">Energy</option>
+              <option value="forces">Forces</option>
+              <option value="magnetism">Magnetism</option>
+              <option value="optics">Optics</option>
+              <option value="spacescience">Space Science</option>
+              <option value="thermodynamics">Thermodynamics</option>
+          </select>
+        </div>
+        <div class="newIdeaItemSubmit">
+          <button id="gradientBtn" value="submit" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <footer id="footer">
+      <%- include('./partials/footer'); %>
+  </footer>
   </body>
 </html>

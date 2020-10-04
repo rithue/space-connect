@@ -1,0 +1,112 @@
+/* .summaryItem{
+    width: 100%;
+    background: #ca0164;
+}
+.summaryItem:before{
+    content: "";
+    display: block;
+    padding-top: 25%;
+} */
+
+.summaryItem {
+    display: flex;
+    /* background-color: darkslategrey; */
+    padding: 3rem 8rem;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-items: center;
+    /* align-content: center; */
+    text-align: center;
+    justify-content: space-between;
+  }
+  
+  .projectTitle {
+    height: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 2rem;
+  line-height: 1;
+  text-align: center;   
+  /* width: 3rem; */
+  padding: 2rem 0rem;
+  color: white;
+  background: #355681;
+  /* background: #e2f0ef; */
+  border: 3px solid #355681;
+  /* color:  #355681;; */
+  margin: 0.375rem; 
+  }
+
+  .projectType {
+    height: 2px;
+    margin-bottom: 10px;
+    width:49%;
+    line-height: 1;
+    text-align: center;   
+    /* width: 3rem; */
+    padding: 2rem 0rem;
+    background: black;
+    border: 3px solid black;
+    color: #6cf;
+    margin: 0.375rem;
+    font-size:1.5rem; 
+  }
+
+  .projectTopic {
+    height: 2px;
+    margin-bottom: 10px;
+    width:46%;
+    line-height: 1;
+    text-align: center;   
+    /* width: 3rem; */
+    padding: 2rem 0rem;
+    /* background: #e2f0ef; */
+    background-color: black;
+    border: 3px solid black;
+    /* color: #51aaa3; */
+    color:#6Cf;
+    margin: 0.375rem; 
+    font-size:1.5rem; 
+  }
+
+  .projectDescription {
+    height: 100px;
+    margin-bottom: 50px;
+    width: 100%;
+    line-height: 1;
+    font-size: 1.5rem;
+    color: black;
+    background: white;
+	/* background: rgba(53,86,129, 0.8); */
+  text-align: center;   
+  /* width: 3rem; */
+  padding: 2rem 0rem;
+  /* background: #e2f0ef; */
+  border: 3px solid #355681;;
+  /* color: #51aaa3; */
+  margin: 0.375rem;
+  }
+
+
+  .titleHeaderItem {
+      
+  }
+
+  #addNewIdeas {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 0;
+    overflow: hidden;
+    transform: translatez(0);
+    text-decoration: none;
+    box-sizing: border-box;
+    font-size: 24px;
+    font-weight: normal;
+    box-shadow: 0 9px 18px rgba(0,0,0,0.2);
+  }
+
+  .gradientBtn {
+  bottom: auto;
+  z-index: -1;
+  background: radial-gradient(90px circle at top center, rgba(238,88,63,.8) 30%, rgba(255,255,255,0));
+}
